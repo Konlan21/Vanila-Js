@@ -1,72 +1,5 @@
+
 /* body {
-    margin: 0;
-    font-family: 0;
-}
-
-.navbar {
-    background-color: #333;
-    color: #fff;
-    padding: 1px 0;
-}
-
-.container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-
-.logo {
-    color: #fff;
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-    margin-left: 2.5rem;
-}
-
-.nav-links {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.nav-links li {
-    display: inline;
-    margin-left: 20px;
-}
-
-.nav-links li a {
-    color: #fff;
-    text-decoration: none;
-}
-
-.menu-icon {
-    display: none;
-    cursor: pointer;
-}
-
-@media screen and (max-width: 768px) {
-    .nav-links {
-        display: none;
-    }
-
-    .menu-icon {
-        display: block;
-        font-size: 2.5rem;
-        margin-right: 2.5rem;
-    }
-
-    .menu-icon:hover {
-        background-color: rgba(255, 255, 255, 0.1);
-    }
-
-}
-
-.active {
-    display: block;
-} */
-
-body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
 }
@@ -96,24 +29,6 @@ body {
     display: none;
 }
 
-/* .search-bar {
-    padding: .5rem .5rem .5rem 0.5rem;
-    font-size: 1rem;
-    background: rgb(3, 119, 109);
-    color: lightgray;
-    border-radius: 4px;
-    border: 1px solid lightgray;
-    width: 50rem;
-}
-.search-bar::placeholder {
-    color: lightgray;
-}
-
-.search-bar:focus {
-    border: 1px solid #fff;
-} */
-
-
 .nav-container {
     display: flex;
     justify-content: space-between;
@@ -140,11 +55,73 @@ body {
         display: block;
     }
 
-    /* .search-bar {
-        width: 4rem;
-    } */
+} */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
+.nav-bar {
+    background: #192A56;
+    padding: .5rem;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* .nav-links {
+    display: flex;
+} */
+
+.logo {
+    height: 2.5rem;
+    margin-left: .4rem;
+}
+
+.nav-li {
+    display: inline;
+    margin-right: 2rem;
+}
+
+
+
+ul {
+    list-style: none;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #00CED1;
+}
+
+.menu-icon {
+    display: none;
+    color: #FFFFFF;
+    font-size: 2.5rem;
+    margin-right: .7rem;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .show-nav-links {
+        display: block;
+    }
+}
 
 
 
