@@ -1,148 +1,159 @@
-
-/* body {
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
+* {
+    box-sizing: border-box;
 }
-
-.nav-bar {
-    background-color: rgb(3, 119, 109);
-}
-
-.logo {
-    height: 2.5rem;
-    width: 3rem;
-    margin-right: .5rem;
-}
-
-.nav-li {
-    list-style: none;
-    display: inline;
-    margin-right: 1rem;
-}
-
-.nav-a {
-    text-decoration: none;
-    color: lightgray;
-}
-
-.menu-icon {
-    display: none;
-}
-
-.nav-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-@media screen and (max-width: 768px) {
-
-    .nav-links {
-        display: none;
-        margin: 0;
-        padding: 0;
-    }
-
-    .menu-icon {
-        display: block;
-        font-size: 3rem;
-        color: lightgray;
-        cursor: pointer;
-        margin-right: .7rem;
-    }
-
-    .active {
-        display: block;
-    }
-
-} */
 
 body {
+     background: url(/Projects/Navbar/pexels-vecislavas-popa-1571459.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
-.nav-bar {
-    background: #192A56;
-    padding: .5rem;
-}
 
-.nav-container {
+.navbar {
     display: flex;
     justify-content: space-between;
+    /* background: #00CED1; */
+    background: rgb(128, 63, 34);
+    flex-wrap: wrap;
     align-items: center;
-}
-
-/* .nav-links {
-    display: flex;
-} */
-
-.logo {
-    height: 2.5rem;
-    margin-left: .4rem;
-}
-
-.nav-li {
-    display: inline;
-    margin-right: 2rem;
-}
-
-
-
-ul {
-    list-style: none;
-}
-
-.nav-link {
-    text-decoration: none;
-    color: #00CED1;
+    /* padding: .5rem .5rem .5rem .2rem; */
 }
 
 .menu-icon {
+    color: #fff;
+    margin: 0 .3rem;
+    cursor: pointer;
+    height: 2.5rem;
+}
+
+
+
+.nav-list {
+    transition: display .5s;
     display: none;
-    color: #FFFFFF;
-    font-size: 2.5rem;
-    margin-right: .7rem;
+    width: 100%;
+    padding: 0;
+    margin-top: 1rem;
+}
+
+
+.nav-item {
+    list-style: none;
+    padding: 1rem 0 1rem .5rem;
+    /* text-align: center; */
+}
+
+.nav-item:hover {
+    /* background: rgb(128, 63, 34); */
+    background: rgba(0, 0, 0, 0.5);
+    /* color: rgb(128, 63, 34); */
+}
+
+.nav-item > a {
+    /* color: #192A56; */
+    color: #fff;
+    text-decoration: none;
+}
+
+
+
+
+
+
+.logo {
+    height: 2.5rem;
+    margin: .3rem 0 .3rem .5rem;
     cursor: pointer;
 }
 
-@media screen and (max-width: 768px) {
-    .menu-icon {
-        display: block;
-    }
-
-    .nav-links {
-        display: none;
-        margin: 0;
-        padding: 0;
-    }
-
-    .show-nav-links {
-        display: block;
-    }
+.active {
+    display: block;
 }
 
 
+@media screen and (min-width: 768px) {
+
+    .navbar {
+        align-items: center;
+
+    }
+    .nav-list {
+        display: flex;
+        width: auto;
+        margin: 0;
+        margin-right: 5rem;
+    }
+
+    .nav-item {
+        margin-right: 4rem;
+        padding: 0;
+        margin-bottom: 0;
+    }
 
 
 
+    .nav-item:hover {
+        background: none;
+    }
+
+    /* .nav-item>a:hover {
+            color: rgb(128, 63, 34);
+        } */
+
+    .menu-icon {
+        display: none;
+    }
+}
+
+/* Modal */
+
+.h1 {
+    color: #fff;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.modal {
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1111;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    /* width: 100%; */
+}
+
+.modal-content {
+    display: none;
+    text-align: center;
+    background: #fff;
+    padding: 1rem 2rem;
+    width: 50%;
+    margin-left: 2rem;
+    border-radius: 6px;
+    margin-top: 2rem;
+}
+
+.open-modalBtn {
+    padding: 1rem 3rem;
+    font-weight: bold;
+    border-radius: 5px;
+    border: 0;
+    color: rgb(128, 63, 34);
+}
+
+.modalBtnContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 13rem;
+}
 
 
+.modal-active {
+    display: block;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* 
-< !-- < !DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Document</title><link rel="stylesheet" href="/styles.css"></head><nav class="navbar"><div class="container"><a class="logo" href="#"><h1>Logo</h1></a><ul class="nav-links"><li><a href="#">Home</a></li><li><a href="#">About</a></li><li><a href="#">Services</a></li><li><a href="#">Contact</a></li></ul><div class="menu-icon">&#9776;
-</div></div></nav><script src="navbar.js"></script></body></html>--> */

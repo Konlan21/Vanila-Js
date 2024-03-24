@@ -1,25 +1,24 @@
-// document.addEventListener("DOMContentLoaded", () => {
-//   const menuIcon = document.querySelector(".menu-icon");
-//   const navLinks = document.querySelector(".nav-links");
-
-//   menuIcon.addEventListener("click", () => {
-//     navLinks.classList.toggle("active");
-//   });
-// });
-
-
-// const menuIcon = document.querySelector('#menu-icon');
-// const navLinks = document.querySelector('#nav-links');
-
-// menuIcon.addEventListener('click', () => {
-//     navLinks.classList.toggle('active');
-// })
-
-
 const menuIcon = document.getElementById('menu-icon');
-const navLinkis = document.querySelector('.nav-links');
+const navList = document.getElementById('nav-list');
+
 
 
 menuIcon.addEventListener('click', () => {
-    navLinkis.classList.toggle('show-nav-links')
+    navList.classList.toggle('active');
+})
+
+// Modal code
+
+
+const modalBtn = document.getElementById("open-modalBtn");
+const modal = document.querySelector('.modal');
+const modalContent = document.querySelector('.modal-content')
+
+
+modalBtn.addEventListener('click', () => {
+    modalContent.classList.toggle('modal-active');
+})
+
+modal.addEventListener('click', () => {
+    modalContent.classList.toggle('modal-active');
 })

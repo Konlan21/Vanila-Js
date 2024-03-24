@@ -1,46 +1,37 @@
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-
-    <!-- <nav class="nav-bar">
-        <div class="nav-container">
-            <img src="instagram-2-1-logo-svgrepo-com.svg" alt="" class="logo">
-            <ul id="nav-links" class="nav-links">
-                <li class="nav-li"><a class="nav-a" href="#">Home</a></li>
-                <li class="nav-li"><a class="nav-a" href="#">About</a></li>
-                <li class="nav-li"><a class="nav-a" href="#">Services</a></li>
-                <li class="nav-li"><a class="nav-a" href="#">Contact</a></li>
-            </ul>
-            <i id="menu-icon" class='menu-icon bx bx-menu-alt-right'></i>
-    </nav> -->
-
-
-
-    <nav class="nav-bar">
-        <div class="nav-container">
-            <img class="logo" src="instagram-2-1-logo-svgrepo-com.svg" alt="">
-            <ul class="nav-links">
-                <li class="nav-li"><a class="nav-link" href="#">Home</a></li>
-                <li class="nav-li"><a class="nav-link" href="#">About</a></li>
-                <li class="nav-li"><a class="nav-link" href="#">Services</a></li>
-                <li class="nav-li"><a class="nav-link" href="#">Contact Us</a></li>
-            </ul>
-
-            <i id="menu-icon" class='menu-icon bx bx-menu-alt-right'></i>
-
-        </div>
+    <nav class="navbar">
+        <img src="instagram-2-1-logo-svgrepo-com.svg" alt="" class="logo">
+        <img src="menu-icon.svg" alt="" class="menu-icon" id="menu-icon">
+        <ul id="nav-list" class="nav-list">
+            <li class="nav-item"><a href="#">Home</a></li>
+            <li class="nav-item"><a href="#">Services</a></li>
+            <li class="nav-item"><a href="#">About Us</a></li>
+            <li class="nav-item"><a href="#">Contact</a></li>
+        </ul>
     </nav>
+
+    <!-- Homepage section -->
+    <section class="homepage">
+        <h2 class="h1">Welcome  to Realuxury Homes</h2>
+        
+        <div class="modalBtnContainer"><button id="open-modalBtn" class="open-modalBtn">Learn More</button></div>
+        <div class="modal">
+            <div class="modal-content">
+                <h3>Open Content</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui obcaecati asperiores quod impedit odio, possimus enim consequuntur quidem adipisci ab amet libero voluptatem, eaque maxime vitae sed labore! Aliquid, hic?</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- End of hompage section -->
 
     <script src="navbar.js"></script>
 </body>
