@@ -1,16 +1,15 @@
+// Select all accordion items
+var accordionItems = document.querySelectorAll(".accordion-item");
 
+// Loop through each accordion item
+accordionItems.forEach(function (item) {
+  // Select the title and content of each item
+  // var title = item.querySelector(".accordion-title");
+  var content = item.querySelector(".accordion-content");
 
-const accordions = document.querySelectorAll('.accordion');
-const panels = document.querySelectorAll('.panel');
-
-
-
-function revealPanel() {
-    panels.forEach((panel) => {
-        panel.classList.toggle('reveal-panel')
-    })
-}
-
-accordions.forEach((accordion) => {
-    accordion.addEventListener('click', revealPanel);
-})
+  // Add click event listener to the entire accordion item
+  item.addEventListener("click", function () {
+    // Toggle the 'active' class on the content to toggle its visibility
+    content.classList.toggle("active");
+  });
+});
