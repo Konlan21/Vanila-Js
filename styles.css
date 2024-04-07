@@ -3,7 +3,7 @@
 }
 
 body {
-     background: url(/Projects/Navbar/pexels-vecislavas-popa-1571459.jpg);
+    background: url(/Projects/Navbar/pexels-vecislavas-popa-1571459.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
@@ -27,19 +27,33 @@ body {
     color: #fff;
     margin: 0 .3rem;
     cursor: pointer;
-    height: 2.5rem;
+    font-size: 2.5rem;
 }
 
+.bx-x {
+    display: none;
+    color: #fff;
+    font-size: 2.5rem;
+}
 
+.bx-x.active {
+    display: block;
+}
 
 .nav-list {
-    transition: display .5s;
-    display: none;
+    transition: max-height .5s;
+    /* display: none; */
+    max-height: 0;
+    overflow: hidden;
     width: 100%;
     padding: 0;
-    margin-top: 1rem;
+    margin: 0;
 }
 
+.active {
+    /* display: block; */
+    max-height: 1000px;
+}
 
 .nav-item {
     list-style: none;
@@ -70,9 +84,6 @@ body {
     cursor: pointer;
 }
 
-.active {
-    display: block;
-}
 
 
 @media screen and (min-width: 768px) {
@@ -86,6 +97,7 @@ body {
         width: auto;
         margin: 0;
         margin-right: 5rem;
+        max-height: 1000px;
     }
 
     .nav-item {
@@ -135,6 +147,7 @@ body {
     margin-left: 2rem;
     border-radius: 6px;
     margin-top: 2rem;
+    transition: display .3s;
 }
 
 .open-modalBtn {
