@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tabbed Content</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .container {
+    max-width: 600px; /* Reduce the max-width */
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  .image-container {
+    text-align: center;
+    max-width: 100%; /* Allow the image container to be fluid */
+    overflow: hidden; /* Hide any overflowing content */
+  }
+img {
+    width: 49rem;
+    height: 17rem;
+    border-radius: 5px;
+    object-fit: cover;
+}
+  .tabs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  .tab {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+    background-color: #ddd;
+    border-radius: 5px;
+    margin: 5px;
+    transition: background-color 0.3s ease;
+  }
+  .active {
+    background-color: #fff;
+    border-bottom: 2px solid #333;
+  }
+  .tab-content {
+    display: none;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 0 5px 5px 5px;
+  }
+  .tab-content.active {
+    display: block;
+  }
+
+  @media only screen and (min-width: 600px) {
+    .container {
+      max-width: 800px; /* Increase the max-width for larger screens */
+    }
+    .tabs {
+      flex-direction: row;
+    }
+    .tab {
+      flex: 1;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="image-container">
+    <img src="/Projects/ImageSlider/images/pexels-janez-podnar-2.jpg" alt="Random Image">
+  </div>
+  <div class="tabs">
+    <div class="tab" data-tab="history">History</div>
+    <div class="tab" data-tab="vision">Vision</div>
+    <div class="tab" data-tab="goals">Goals</div>
+  </div>
+  <div id="history" class="tab-content">
+    <p>This is the history tab. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  </div>
+  <div id="vision" class="tab-content">
+    <p>This is the vision tab. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  </div>
+  <div id="goals" class="tab-content">
+    <p>This is the goals tab. Nunc vel risus commodo viverra maecenas accumsan lacus vel facilisis. Orci nulla pellentesque dignissim enim sit amet venenatis. Commodo nulla facilisi nullam vehicula ipsum a arcu. Sagittis id consectetur purus ut faucibus.</p>
+  </div>
+</div>
+
+<script src="tab.js"></script>
+</body>
+</html>

@@ -89,6 +89,18 @@
       text-align: center;
       margin-top: 1.2rem;
     }
+
+    /* animation */
+
+    .menu-item {
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0; /* Initially hide the menu items */
+}
+
+.menu-item.active {
+  opacity: 1; /* Show the menu item with animation */
+}
+
   </style>
 </head>
 <body>
@@ -106,7 +118,7 @@
     <div class="tab" data-category="breakfast">Breakfast</div>
     <div class="tab" data-category="lunch">Lunch</div>
     <div class="tab" data-category="shakes">Shakes</div>
-    <div class="tab" data-category="dinner">Dinner</div>
+    <div class="tab"  data-category="dinner">Dinner</div>
   </div>
   <div class="menu-items">
     <!-- Sample menu items -->
@@ -116,15 +128,6 @@
         <h3 class="menu-title">Caesar Salad</h3>
         <p class="menu-price">$10</p>
         <p class="menu-desc">A fresh salad with Caesar dressing, croutons, and Parmesan cheese.</p>
-      </div>
-    </div>
-    
-    <div class="menu-item active" data-category="breakfast">
-      <img src="https://source.unsplash.com/400x300/?spaghetti,bolognese" alt="Spaghetti Bolognese">
-      <div class="menu-item-details">
-        <h3>Spaghetti Bolognese</h3>
-        <p>$16</p>
-        <p>Classic Italian pasta with a rich meat sauce.</p>
       </div>
     </div> -->
     

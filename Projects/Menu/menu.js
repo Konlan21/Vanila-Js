@@ -93,56 +93,109 @@ const foods = [
 
 
 const body = document.querySelector('body');
-// const menuDiv = document.querySelector('.menu-item');
-// const menuImage = document.querySelector('.menu-img');
-// const menuTitle = document.querySelector('.menu-title');
-// const menuPrice = document.querySelector('.menu-price');
-// const menuDesc = document.querySelector('.menu-desc');
+const menuItemContainer = document.querySelector('.menu-items')
 
 
 
-function showMenuItems() {
-  const menuIitems = document.querySelector('.menu-items');
-  console.log(menuIitems)
-
-    foods.forEach((food) => {
-        let div = document.createElement('div');
-        div.classList = "menu-item active";
-
-        let img = document.createElement('img');
-        img.src = food.img;
-        div.appendChild(img);
-
-        let detailsDiv = document.createElement('div');
-        detailsDiv.classList = "menu-item-details";
-
-        let h3 = document.createElement('h3');
-        h3.innerText = food.title;
-
-        detailsDiv.appendChild(h3)
-
-        let price = document.createElement('p');
-        price.innerText = food.price;
-
-        detailsDiv.appendChild(price);
-
-        let desc = document.createElement('p');
-        desc.innerText = food.description;
-
-        detailsDiv.appendChild(desc);
-
-        div.appendChild(detailsDiv)
-        
+// document.addEventListener('DOMContentLoaded', () => {
+//   displayMenuItems();
+//   const tabs = document.querySelectorAll('.tab');
+//   tabs.forEach(tab => {
+//     tab.addEventListener('click', () => {
+//       const category = tab.getAttribute('data-category');
+//       filterMenuItems(category);
+//       // console.log(category)
+//     });
+//   });
+// });
 
 
 
-        menuIitems.appendChild(div) 
-      })
+// function filterMenuItems(category) {
+//   const menuItems = document.querySelectorAll('.menu-item');
+//   menuItems.forEach(menuItem => {
+//     const menuItemCategory = menuItem.getAttribute('data-category');
+//     if (category === 'all' || menuItemCategory === category) {
+//       menuItem.style.display = 'block'; // Show the menu item
+//     } else {
+//       menuItem.style.display = 'none'; // Hide the menu item
+//     }
+//   });
+// }
 
 
-    
+const categoryTabs = document.querySelectorAll('.tab');
+
+
+
+
+
+function displayMenuItems() {
+  
+const foodContent = foods.map((food) => {
+  return `
+  <div class="menu-item active" data-category=${food.category}>
+  <img class="menu-img" src=${food.img} alt="Caesar Salad">
+  <div class="menu-item-details">
+    <h3 class="menu-title">${food.title}</h3>
+    <p class="menu-price">${food.price}</p>
+    <p class="menu-desc">${food.description}</p>
+  </div>
+  </div>
+`
+}).join('')
+
+
+// foodContent.join('');
+menuItemContainer.innerHTML = foodContent;
 }
 
+// window.addEventListener('DOMContentLoaded', loadMenuItems)
+
+// filterTabs = document.querySelectorAll('.tab');
+
+// filterTabs.forEach((filterTab) => {
+//   // console.log(tab.dataset.category)
+//   filterTab.addEventListener('click', () => {
+//     // filterTab.dataset.category)
+//     filterTabCategory = filterTab.dataset.category;
+//     filterMenuItems(filterTabCategory);
+//   })
+// });
 
 
-document.addEventListener('DOMContentLoaded', showMenuItems)
+// function filterMenuItems(category) {
+//   menuItems = document.querySelectorAll('.menu-item');
+  
+//   menuItems.forEach(menuItem => {
+//     menuItemCategory = menuItem.getAttribute('data-category');
+//     alert(menuItemCategory)
+//   })
+// }
+
+// filterMenuItems()const menuItemContainer = document.querySelector('.menu-items');
+
+window.addEventListener('DOMContentLoaded', () => {
+  displayMenuItems()
+  categoryTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const tabCategory = tab.getAttribute('data-category');
+      // console.log(tabCategory)``
+      filterMenuItems(tabCategory);
+    })
+  })
+})
+
+
+
+function filterMenuItems(tabCategory) {
+  const menuItems = document.querySelectorAll('.menu-item');
+  menuItems.forEach(menuItem => {
+    menuItemCategory = menuItem.getAttribute('data-category');
+    if(tabCategory === 'all'|| menuItemCategory === tabCategory) {
+      menuItem.style.display = 'block';
+    } else {
+      menuItem.style.display = 'none'
+    }
+  })
+}
