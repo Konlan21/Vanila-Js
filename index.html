@@ -3,11 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>My JavaScript Projects</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        main {
+            padding: 2rem;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+        }
+
+        .grid-item {
+            background-color: #fff;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+
+        .grid-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .grid-item a {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            text-align: center;
+        }
+
+        .grid-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px 8px 0 0;
+        }
+
+        .grid-item h2 {
+            margin-top: 0.5rem;
+        }
+
+        .grid-item p {
+            margin: 0.5rem 0 0;
+        }
+    </style>
 </head>
 <body>
-    
-<h1>Hello world</h1>
-    <script src="index.js"></script>
+    <header>
+        <h1>My JavaScript Projects</h1>
+    </header>
+    <main>
+        <div class="grid-container">
+            <div class="grid-item">
+                <a href="Projects/counter/counter.html" target="_blank">
+                    <img src="images/counter.png" alt="Project 1">
+                    <h2>Counter</h2>
+                    <!-- <p>A description of Project 1.</p> -->
+                </a>
+            </div>
+            <div class="grid-item">
+                <a href="Projects/Reviews/reviews.html" target="_blank">
+                    <img src="images/reviews.png" alt="Project 2">
+                    <h2>Reviews</h2>
+                    <!-- <p>A description of Project 2.</p> -->
+                </a>
+            </div>
+            <div class="grid-item">
+                <a href="Projects/Sidebar/sidebar.html" target="_blank">
+                    <img src="images/sidebar.png" alt="Project 3">
+                    <h2>Sidebar</h2>
+                    <!-- <p>A description of Project 3.</p> -->
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="Projects/Tabs/tabs.html" target="_blank">
+                    <img src="images/TABS.png" alt="Project 3">
+                    <h2>TABS</h2>
+                    <!-- <p>A description of Project 3.</p> -->
+                </a>
+            </div>
+            <!-- Add more grid items as needed -->
+        </div>
+    </main>
+    <script>
+        // Optional JavaScript can be added here for additional interactivity
+    </script>
 </body>
 </html>
