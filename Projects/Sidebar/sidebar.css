@@ -49,13 +49,14 @@ h1 {
     bottom: -6rem;
     right: 1px;
     left: 13rem; */
-    border: 2px solid #fff; 
+    border: 3px solid #fff; 
     border-radius: .6rem;
-    padding: 6px;
+    padding: 0 15px 0 11px;
     margin: 0;
     width: 0;
     text-align: center;
-    margin: .5rem 13rem;
+    margin: .5rem 12rem;
+    font-size: 1.2rem;
 }
 
 h1:hover {
