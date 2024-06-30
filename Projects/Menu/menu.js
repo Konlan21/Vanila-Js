@@ -4,7 +4,7 @@ const foods = [
     title: "Eggs Benedict",
     category: "breakfast",
     price: "$12",
-    img: "https://source.unsplash.com/400x300/?eggs",
+    img: "images/eggs-benedict.jpg",
     description:
       "Classic breakfast dish consisting of two halves of an English muffin, each topped with Canadian bacon, poached eggs, and hollandaise sauce.",
   },
@@ -13,7 +13,7 @@ const foods = [
     title: "Avocado Toast",
     category: "breakfast",
     price: "$8",
-    img: "https://source.unsplash.com/400x300/?avocado",
+    img: "images/avocado-toast.jpg",
     description:
       "Sliced avocado served atop toasted bread, seasoned with salt, pepper, and other toppings such as cherry tomatoes or poached eggs.",
   },
@@ -22,7 +22,7 @@ const foods = [
     title: "Grilled Chicken Salad",
     category: "lunch",
     price: "$10",
-    img: "https://source.unsplash.com/400x300/?chicken,salad",
+    img: "images/grilled-chik-salad.jpg",
     description:
       "Healthy salad with grilled chicken breast, mixed greens, cherry tomatoes, cucumber slices, and balsamic vinaigrette dressing.",
   },
@@ -31,7 +31,7 @@ const foods = [
     title: "Margherita Pizza",
     category: "lunch",
     price: "$14",
-    img: "https://source.unsplash.com/400x300/?pizza",
+    img: "images/Margherita-Pizza.jpg",
     description:
       "Traditional Italian pizza topped with tomato sauce, fresh mozzarella cheese, basil leaves, and a drizzle of olive oil.",
   },
@@ -40,7 +40,7 @@ const foods = [
     title: "Chocolate Milkshake",
     category: "shakes",
     price: "$6",
-    img: "https://source.unsplash.com/400x300/?milkshake,chocolate",
+    img: "images/Chocolate-Milkshake.jpg",
     description:
       "Indulgent milkshake made with creamy vanilla ice cream, rich chocolate syrup, and topped with whipped cream and chocolate shavings.",
   },
@@ -49,7 +49,7 @@ const foods = [
     title: "Strawberry Smoothie",
     category: "shakes",
     price: "$5",
-    img: "https://source.unsplash.com/400x300/?smoothie,strawberry",
+    img: "images/Strawberry-Smoothie.jpg",
     description:
       "Refreshing smoothie blended with fresh strawberries, banana, yogurt, and a splash of orange juice.",
   },
@@ -58,7 +58,7 @@ const foods = [
     title: "Grilled Salmon",
     category: "dinner",
     price: "$18",
-    img: "https://source.unsplash.com/400x300/?salmon",
+    img: "images/Grilled-Salmon.jpg",
     description:
       "Healthy and flavorful grilled salmon fillet served with roasted vegetables and a lemon wedge.",
   },
@@ -67,7 +67,7 @@ const foods = [
     title: "Spaghetti Bolognese",
     category: "dinner",
     price: "$16",
-    img: "https://source.unsplash.com/400x300/?spaghetti,bolognese",
+    img: "images/Spaghetti-Bolognese.jpg",
     description:
       "Classic Italian pasta dish featuring spaghetti noodles topped with a rich meat sauce made from ground beef, tomatoes, onions, and herbs.",
   },
@@ -76,7 +76,7 @@ const foods = [
     title: "Pancakes",
     category: "breakfast",
     price: "$9",
-    img: "https://source.unsplash.com/400x300/?pancakes",
+    img: "images/pancakes.jpg",
     description:
       "Fluffy pancakes served with butter and maple syrup, a classic breakfast favorite.",
   },
@@ -85,7 +85,7 @@ const foods = [
     title: "Caesar Salad",
     category: "lunch",
     price: "$12",
-    img: "https://source.unsplash.com/400x300/?salad,caesar",
+    img: "images/Caesar-Salad.jpg",
     description:
       "Fresh romaine lettuce tossed with Caesar dressing, croutons, and Parmesan cheese, a timeless salad option.",
   },
