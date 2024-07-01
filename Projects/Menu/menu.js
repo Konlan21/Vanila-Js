@@ -225,4 +225,5 @@ searchBar.addEventListener('keyup', () => {
 
   clearBtn.addEventListener('click', () => {
     searchBar.value = "";
+    displayMenuItems()
   })
