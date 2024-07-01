@@ -131,24 +131,23 @@ const categoryTabs = document.querySelectorAll('.tab');
 
 
 function displayMenuItems() {
-  
-const foodContent = foods.map((food) => {
-  return `
-  <div class="menu-item active" data-category=${food.category}>
-  <img class="menu-img" src=${food.img} alt="Caesar Salad">
-  <div class="menu-item-details">
-    <h3 id="menu-title" class="menu-title">${food.title}</h3>
-    <p class="menu-price">${food.price}</p>
-    <p class="menu-desc">${food.description}</p>
-  </div>
-  </div>
-`
-}).join('')
+  const foodContent = foods.map((food) => {
+    return `
+      <div class="menu-item active" data-category=${food.category}>
+        <img class="menu-img" src=${food.img} alt="${food.title}">
+        <div class="menu-item-details">
+          <h3 id="menu-title" class="menu-title">${food.title}</h3>
+          <p class="menu-price">${food.price}</p>
+          <p class="menu-desc">${food.description}</p>
+          <button class="order-button">Order</button>
+        </div>
+      </div>
+    `;
+  }).join('');
 
-
-// foodContent.join('');
-menuItemContainer.innerHTML = foodContent;
+  menuItemContainer.innerHTML = foodContent;
 }
+
 
 // window.addEventListener('DOMContentLoaded', loadMenuItems)
 
