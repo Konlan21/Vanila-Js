@@ -137,7 +137,7 @@ const foodContent = foods.map((food) => {
   <div class="menu-item active" data-category=${food.category}>
   <img class="menu-img" src=${food.img} alt="Caesar Salad">
   <div class="menu-item-details">
-    <h3 class="menu-title">${food.title}</h3>
+    <h3 id="menu-title" class="menu-title">${food.title}</h3>
     <p class="menu-price">${food.price}</p>
     <p class="menu-desc">${food.description}</p>
   </div>
@@ -199,3 +199,30 @@ function filterMenuItems(tabCategory) {
     }
   })
 }
+
+
+// Search functionality
+
+
+let searchBar = document.querySelector('#search-bar');
+
+searchBar.addEventListener('keyup', () => {
+  let menuItems = document.querySelectorAll('.menu-item');
+  
+  menuItems.forEach(menuItem => {
+    let searchValue = searchBar.value;
+    let itemName = menuItem.querySelector('#menu-title').innerText;
+    if(itemName.toLowerCase().includes(searchValue.toLowerCase())) {
+      menuItem.style.display = "block";
+    } else {
+      menuItem.style.display = "none";
+    }
+  })
+
+  })
+
+  let clearBtn = document.querySelector('#close-icon');
+
+  clearBtn.addEventListener('click', () => {
+    searchBar.value = "";
+  })

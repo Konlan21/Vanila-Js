@@ -26,6 +26,9 @@
       background-color: #444;
       padding: 10px 0;
       text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
     nav a {
       color: #fff;
@@ -34,6 +37,31 @@
     }
     nav a:hover {
       background-color: #555;
+    }
+    /* Search Bar Styles */
+    .search-container {
+      display: flex;
+      align-items: center;
+      background-color: #fff;
+      border-radius: 5px;
+      padding: 5px 10px;
+      margin-left: 20px;
+    }
+    .search-container input[type="text"] {
+      border: none;
+      padding: 10px;
+      font-size: 16px;
+      outline: none;
+    }
+    .search-container button {
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      padding: 10px;
+    }
+    .search-container button img {
+      width: 20px;
+      height: 20px;
     }
     /* Menu Styles */
     .menu {
@@ -93,17 +121,19 @@
       margin-top: 1.2rem;
     }
 
-    /* animation */
-
+    /* Animation */
     .menu-item {
-  transition: opacity 0.3s ease-in-out;
-  opacity: 0; /* Initially hide the menu items */
-}
+      transition: opacity 0.3s ease-in-out;
+      opacity: 0;
+    }
 
-.menu-item.active {
-  opacity: 1; /* Show the menu item with animation */
-}
-
+    .menu-item.active {
+      opacity: 1;
+    }
+    #close-icon {
+      font-weight: bold;
+      font-size: 1rem;
+    }
   </style>
 </head>
 <body>
@@ -115,13 +145,20 @@
     <a href="#">Menu</a>
     <a href="#">About Us</a>
     <a href="#">Contact</a>
+    <div class="search-container">
+      <input type="text" id="search-bar" placeholder="Search for food...">
+      <button id="close-icon" type="button">
+        X
+        <!-- <img id="close-icon" src="https://img.icons8.com/material-outlined/24/000000/close.png" alt="X"> -->
+      </button>
+    </div>
   </nav>
   <div class="menu">
     <div class="tab active" data-category="all">All</div>
     <div class="tab" data-category="breakfast">Breakfast</div>
     <div class="tab" data-category="lunch">Lunch</div>
     <div class="tab" data-category="shakes">Shakes</div>
-    <div class="tab"  data-category="dinner">Dinner</div>
+    <div class="tab" data-category="dinner">Dinner</div>
   </div>
   <div class="menu-items">
     <!-- Sample menu items -->
