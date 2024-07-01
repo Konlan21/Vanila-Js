@@ -95,35 +95,6 @@ const foods = [
 const body = document.querySelector('body');
 const menuItemContainer = document.querySelector('.menu-items')
 
-
-
-// document.addEventListener('DOMContentLoaded', () => {
-//   displayMenuItems();
-//   const tabs = document.querySelectorAll('.tab');
-//   tabs.forEach(tab => {
-//     tab.addEventListener('click', () => {
-//       const category = tab.getAttribute('data-category');
-//       filterMenuItems(category);
-//       // console.log(category)
-//     });
-//   });
-// });
-
-
-
-// function filterMenuItems(category) {
-//   const menuItems = document.querySelectorAll('.menu-item');
-//   menuItems.forEach(menuItem => {
-//     const menuItemCategory = menuItem.getAttribute('data-category');
-//     if (category === 'all' || menuItemCategory === category) {
-//       menuItem.style.display = 'block'; // Show the menu item
-//     } else {
-//       menuItem.style.display = 'none'; // Hide the menu item
-//     }
-//   });
-// }
-
-
 const categoryTabs = document.querySelectorAll('.tab');
 
 
@@ -138,41 +109,16 @@ function displayMenuItems() {
         <div class="menu-item-details">
           <h3 id="menu-title" class="menu-title">${food.title}</h3>
           <p class="menu-price">${food.price}</p>
-          <p class="menu-desc">${food.description}</p>
           <button class="order-button">Order</button>
-        </div>
-      </div>
-    `;
-  }).join('');
+          </div>
+          </div>
+          `;
+        }).join('');
+        // <p class="menu-desc">${food.description}</p>
 
   menuItemContainer.innerHTML = foodContent;
 }
 
-
-// window.addEventListener('DOMContentLoaded', loadMenuItems)
-
-// filterTabs = document.querySelectorAll('.tab');
-
-// filterTabs.forEach((filterTab) => {
-//   // console.log(tab.dataset.category)
-//   filterTab.addEventListener('click', () => {
-//     // filterTab.dataset.category)
-//     filterTabCategory = filterTab.dataset.category;
-//     filterMenuItems(filterTabCategory);
-//   })
-// });
-
-
-// function filterMenuItems(category) {
-//   menuItems = document.querySelectorAll('.menu-item');
-  
-//   menuItems.forEach(menuItem => {
-//     menuItemCategory = menuItem.getAttribute('data-category');
-//     alert(menuItemCategory)
-//   })
-// }
-
-// filterMenuItems()const menuItemContainer = document.querySelector('.menu-items');
 
 window.addEventListener('DOMContentLoaded', () => {
   displayMenuItems()
