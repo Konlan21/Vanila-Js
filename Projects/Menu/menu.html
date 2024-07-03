@@ -3,182 +3,42 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Restaurant Menu</title>
-  <style>
-    /* General Styles */
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-    /* Header Styles */
-    header {
-      background-color: #333;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
-    }
-    h1 {
-      margin: 0;
-    }
-    /* Navigation Styles */
-    nav {
-      background-color: #444;
-      padding: 10px 0;
-      text-align: center;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      padding: 10px 20px;
-    }
-    nav a:hover {
-      background-color: #555;
-    }
-    /* Search Bar Styles */
-    .search-container {
-      display: flex;
-      align-items: center;
-      background-color: #fff;
-      border-radius: 5px;
-      padding: 5px 10px;
-      margin-left: 20px;
-    }
-    .search-container input[type="text"] {
-      border: none;
-      padding: 10px;
-      font-size: 16px;
-      outline: none;
-    }
-    .search-container button {
-      background-color: transparent;
-      border: none;
-      cursor: pointer;
-      padding: 10px;
-    }
-    .search-container button img {
-      width: 20px;
-      height: 20px;
-    }
-    /* Menu Styles */
-    .menu {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      padding: 20px;
-    }
-    .tab {
-      cursor: pointer;
-      padding: 10px 20px;
-      background-color: #f0f0f0;
-      border-radius: 5px 5px 0 0;
-    }
-    .tab.active {
-      background-color: #ddd;
-    }
-    .menu-items {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      padding: 1rem 11rem;
-      justify-content: center;
-    }
-    .menu-item {
-      width: 300px;
-      background-color: #fff;
-      border-radius: 5px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      display: none;
-    }
-    .menu-item img {
-      width: 100%;
-      border-radius: 5px 5px 0 0;
-      object-fit: cover;
-      height: 14rem;
-    }
-    .menu-item-details {
-      padding: 10px;
-    }
-    .menu-item-details h3 {
-      margin: 5px 0;
-    }
-    .menu-item-details p {
-      margin: 5px 0;
-    }
-    .menu-item.active {
-      display: block;
-    }
-    /* Footer Styles */
-    footer {
-      background-color: #333;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
-      margin-top: 1.2rem;
-    }
-
-    /* Animation */
-    .menu-item {
-      transition: opacity 0.3s ease-in-out;
-      opacity: 0;
-    }
-
-    .menu-item.active {
-      opacity: 1;
-    }
-    #close-icon {
-      font-weight: bold;
-      font-size: 1rem;
-    }
-
-    /* Order Button Styles */
-.order-button {
-  background-color: #333;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-  margin-top: 10px;
-  width: 100%;
-  transition: background-color 0.3s;
-}
-
-.order-button:hover {
-  background-color: #555;
-}
-
-  </style>
+  <title>Menu masters</title>
+  <link rel="stylesheet" href="menu.css">
 </head>
 <body>
-  <header>
-    <h1>Restaurant Menu</h1>
-  </header>
-  <nav>
-    <a href="#">Home</a>
-    <a href="#">Menu</a>
-    <a href="#">About Us</a>
-    <a href="#">Contact</a>
-    <div class="search-container">
-      <input type="text" id="search-bar" placeholder="Search for food...">
-      <button id="close-icon" type="button">
-        X
-        <!-- <img id="close-icon" src="https://img.icons8.com/material-outlined/24/000000/close.png" alt="X"> -->
-      </button>
+  <header class="header">
+    <div class="header-container">
+      <h1 class="logo">Menu Masters</h1>
+      <div class="header-right">
+        <div class="search-container">
+          <input type="text" id="search-bar" placeholder="Search for food...">
+          <button id="close-icon" type="button">X</button>
+        </div>
+        <div class="cart-icon">
+          <img src="https://img.icons8.com/material-outlined/24/000000/shopping-cart.png" alt="Cart Icon">
+        </div>
+      </div>
     </div>
+  </header>
+  
+  <!-- <nav class="navigation">
+    <ul class="nav-menu">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Menu</a></li>
+      <li><a href="#">About Us</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
   </nav>
-  <div class="menu">
+   --> 
+  <div class="menu-tabs">
     <div class="tab active" data-category="all">All</div>
     <div class="tab" data-category="breakfast">Breakfast</div>
     <div class="tab" data-category="lunch">Lunch</div>
     <div class="tab" data-category="shakes">Shakes</div>
     <div class="tab" data-category="dinner">Dinner</div>
   </div>
+  
   <div class="menu-items">
     <!-- Sample menu items -->
     <!-- <div class="menu-item active" data-category="breakfast">
@@ -192,7 +52,8 @@
     
     <!-- Repeat similar structure for other menu items -->
   </div>
-  <footer>
+  
+  <footer class="footer">
     <p>&copy; 2024 Restaurant. All rights reserved.</p>
   </footer>
 
